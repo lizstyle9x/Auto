@@ -19,17 +19,29 @@ if_pixel_in(144,76,144,76,6405864)
    if(pxl(283,152) = 1981681)
       LCLICK(275,120)
    end_if
-   //   mkn()
-   //   quettd(10,50,291,185)
-   //   inmau(81,178)
-   //   inmau(201,177)
+   getscreen
+   if(pxl(45,161) = 0)
+      print("stop -0")
+      $toc = 1
+      keyUp(186)
+      $toc = 2
+   end_if
+   //----------------dame
+   if($toc = 2)
       inc($turn)
-      print("turn = ", $turn)
-      keypress(39)
-      dame(50,15)
+      print(">>>---turn--->", $turn)
+      dame(50,20)
       wait(5)
       $toc = 0
-   end_i
+   end_if
+   //---------------bo..
+   if($toc = 0)
+      if(pxl(143,53) = 3185877)//7.
+         //      if(pxl(143,62) = 507134)//6.
+         keyDown(186)
+         print(" bo.... ")
+      end_if
+   end_if
 end_if
 //-----------------------------
 latthe(1,15)
