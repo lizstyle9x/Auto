@@ -1,6 +1,6 @@
 #autorun
 #name("DHT")
-#includer("heart.jpg")
+#includer("sub.xml")
 team(1,1,2)
 taophong(0)
 getscreen
