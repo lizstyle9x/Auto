@@ -1,0 +1,119 @@
+﻿#name :"Auto-nvNGAY"
+$tk = TFREAD("taikhoan\taikhoan.txt",1)
+$hwnd1 = wndfind($tk)
+waitms(500)
+
+if ($hwnd1 > 0 )
+   
+   $file_progress = "progress.txt"
+   
+   IF (TFCOUNT($file_progress) > 1 )
+      $phoban = TFREAD($file_progress, 1)
+      $count = TFREAD($file_progress, 2)
+   ELSE
+      $phoban = 1
+      $count = 1
+   END_IF
+   
+   
+   SWITCH($phoban)
+      CASE(1)
+         $max_runs = 4
+      CASE(2)
+         $max_runs = 4
+      CASE(3)
+         $max_runs = 4
+      CASE(4)
+         $max_runs = 4
+      CASE(5)
+         $max_runs = 4
+      CASE(6)
+         $max_runs = 4
+      CASE(7)
+         $max_runs = 4
+      CASE(8)
+         $max_runs = 4
+      CASE(9)
+         $max_runs = 4
+      CASE(10)
+         $max_runs = 4
+      CASE(11)
+         $max_runs = 4
+      CASE(12)
+         $max_runs = 4
+
+   END_SWITCH
+   
+   WHILE($phoban <= 12)
+      WHILE($count <= $max_runs)
+         logwrite("S1 Đang di pho ban ", $phoban, " so lan : ", $count, " / ", $max_runs)
+         
+         SWITCH($phoban)
+            CASE(1)
+               #include "sc1t.cms"
+            CASE(2)
+               #include "sc2t.cms"
+            CASE(3)
+               #include "sc3t.cms"
+            CASE(4)
+               #include "sc4t.cms"
+            CASE(5)
+               #include "sc5t.cms"
+            CASE(6)
+               #include "sc6t.cms"
+            CASE(7)
+               #include "sc7t.cms"
+            CASE(8)
+               #include "sc8t.cms"
+            CASE(9)
+               #include "sc9t.cms"
+            CASE(10)
+               #include "sc10t.cms"
+            CASE(11)
+               #include "sc11t.cms"
+            CASE(12)
+               #include "sc12t.cms"
+
+         END_SWITCH
+         
+      END_CYC
+      
+      inc($phoban, 1)
+      $count = 1
+      SWITCH($phoban)
+         CASE(1)
+            $max_runs = 4
+         CASE(2)
+            $max_runs = 4
+         CASE(3)
+            $max_runs = 4
+         CASE(4)
+            $max_runs = 4
+         CASE(5)
+            $max_runs = 4
+         CASE(6)
+            $max_runs = 4
+         CASE(7)
+            $max_runs = 4
+         CASE(8)
+            $max_runs = 4
+         CASE(9)
+            $max_runs = 4
+         CASE(10)
+            $max_runs = 4
+         CASE(11)
+            $max_runs = 4
+         CASE(12)
+            $max_runs = 4
+
+      END_SWITCH
+      
+      TFWRITE($file_progress, $phoban, 1)
+      TFWRITE($file_progress, $count, 2)
+      
+   END_CYC
+end_if
+
+
+logwrite("Hoàn thành nv ngày & veDHT.")
+halt

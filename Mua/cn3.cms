@@ -1,0 +1,424 @@
+﻿#name: "Atuo Ren"  // vk goc 15
+getscreen
+#autorun
+$tk = TFREAD("taikhoan\\taikhoan.txt",1)     //tài khoan
+$hwnd1 = wndfind($tk)
+//waitms(30)
+$x= 1100
+$y= 0
+$d=300
+$r=220
+WNDSETINFO($hwnd1,$x,$y,$d,$r)
+hsetText($hwnd1,$tk)
+
+//lockwin
+$hwnd = wndfind($tk)
+hset($hwnd,1)
+LCLICK(1,1)
+//--------------------------------
+
+// Hop thanh
+
+getscreen
+
+if_pixel_in(51, 128, 51, 128, 2260582)  //hop thành
+   if_pixel_in(135, 135, 135, 135, 7255974)
+      waitms(1000)
+      beep(900,900)
+      waitms(1000)
+      $da = 0
+   else
+      $da = 1
+   end_if
+   
+   if_pixel_in(99, 132, 99, 132, 1202803)
+      waitms(1000)
+      beep(900,900)
+      waitms(1000)
+      $vk = 0
+   else
+      $vk = 1
+   end_if
+   if ($da = 1) & ($vk = 1)
+      LCLICK(95,159)  // hop thành
+   end_if
+end_if
+//------------ tang cap --------------------
+
+getscreen
+
+if_pixel_in(51, 113, 51, 113, 1590395)
+   if_pixel_in(136, 126, 136, 126, 6389406)
+      waitms(100)
+      LCLICK(136,131)  // TICH
+      waitms(100)
+   end_if
+   
+   if_pixel_in(136, 126, 136, 126, 6389406)
+      waitms(1000)
+      beep(900,900)
+      waitms(1000)
+      $da = 0
+   else
+      if_pixel_in(84, 143, 84, 143, 1786253)
+         LCLICK(95,159)  // tang cap
+      end_if
+      
+   end_if
+   
+end_if
+
+//------------ chien hon --------------------
+
+getscreen
+
+if_pixel_in(65, 160, 65, 160, 9840784)
+   if_pixel_in(143, 168, 143, 168, 4565981)
+      waitms(100)
+      LCLICK(136,138)  // tich
+      waitms(100)
+   else
+      LCLICK(96,160)  // nang cap
+   end_if
+end_if
+
+
+//------------ dat vang --------------------
+
+getscreen
+
+if_pixel_in(73, 111, 73, 111, 15647836)
+   if_pixel_in(142, 142, 142, 142, 4368860)
+      waitms(100)
+      LCLICK(134,111)  //
+      waitms(100)
+   end_if
+   
+   if_pixel_in(137, 117, 137, 117, 1261669)
+      waitms(100)
+      beep(900,900)
+      waitms(100)
+   else
+      LCLICK(92,153)  //
+   end_if
+end_if
+
+//------------ phu ma --------------------
+
+getscreen
+
+if_pixel_in(68, 152, 68, 152, 15560214)
+   if_pixel_in(144, 155, 144, 155, 5684455)
+      waitms(100)
+      LCLICK(136,125)  // x
+      waitms(100)
+   end_if
+   
+   if_pixel_in(127, 97, 127, 97, 8624303)
+      waitms(100)
+      beep(900,900)
+      waitms(100)
+   else
+      LCLICK(97,143)  // ok
+   end_if
+end_if
+
+//------------ tang sao --------------------
+
+getscreen
+
+if_pixel_in(40, 87, 40, 87, 10184111)
+   if_pixel_in(140, 155, 140, 155, 2656717)
+      waitms(100)
+      LCLICK(133,123)  // x
+      waitms(100)
+   end_if
+   
+   if_pixel_in(131, 131, 131, 131, 8940172)
+      waitms(100)
+      beep(900,900)
+      waitms(100)
+   else
+      LCLICK(91,153)  // o
+   end_if
+end_if
+
+//------------ Trang bi pet --------------------
+
+getscreen
+
+if_pixel_in(60, 52, 60, 52, 12578559)
+   waitms(100)
+   LCLICK(115,114)  // tang cap pet
+   waitms(300)
+   LCLICK(117,34)  // tien hoa
+   waitms(100)
+end_if
+
+if_pixel_in(165, 76, 165, 76, 205386)
+   waitms(100)
+   LCLICK(117,34)  // tien hoa
+   waitms(100)
+end_if
+
+if_pixel_in(200, 81, 200, 81, 69942)
+   if_pixel_in(196, 179, 196, 179, 14740202)
+      waitms(100)
+      LCLICK(190,148)  // tich cho an het
+      waitms(100)
+   end_if
+   
+   if_pixel_in(196, 179, 196, 179, 12171705)
+      if_pixel_in(141, 119, 141, 119, 7928575)
+         waitms(1000)
+         Beep(900,900)
+         waitms(1000)
+      end_if
+      waitms(100)
+      LCLICK(196,140)  // cho an
+      waitms(100)
+   end_if
+end_if
+
+//------------ khoan lo --------------------
+
+
+getscreen
+
+if_pixel_in(161, 61, 161, 61, 268408)
+   if_pixel_in(127, 140, 127, 140, 2643839)
+      LCLICK(108,120)  // o so 1
+      waitms(300)
+   end_if
+   
+   if_pixel_in(127, 140, 127, 140, 11637378)
+      LCLICK(128,127)  // khoan 1
+      waitms(300)
+   end_if
+   if_pixel_in(127, 140, 127, 140, 11966083)
+      LCLICK(128,127)  // khoan 2
+      waitms(300)
+   end_if
+   if_pixel_in(127, 140, 127, 140, 10186850)
+      LCLICK(128,127)  // khoan  3
+      waitms(300)
+   end_if
+   if_pixel_in(127, 140, 127, 140, 9153977)
+      LCLICK(128,127)  // khoan  4
+      waitms(300)
+      $p = 0
+   end_if
+   if_pixel_in(127, 140, 127, 140, 7199734)
+      if ($p < 250)
+         LCLICK(128,127)  // khoan  5
+         $p = $p + 1
+      end_if
+      if ($p >= 250)
+         if_pixel_in(105, 148, 105, 148, 8684145)
+            LCLICK(94,119)  // O 2
+            wait(1)
+         end_if
+         if_pixel_in(89, 148, 89, 148, 8816514)
+            LCLICK(94,119)  // O 3
+            wait(1)
+         end_if
+         if_pixel_in(75, 148, 75, 148, 8684145)
+            LCLICK(94,119)  // O 4
+            wait(1)
+         end_if
+         if_pixel_in(60, 148, 60, 148, 8552557)
+            LCLICK(94,119)  // O 5
+            wait(1)
+         end_if
+         if_pixel_in(45, 148, 45, 148, 7368545)
+            LCLICK(94,119)  // O 6
+            wait(1)
+         end_if
+      end_if
+   end_if
+end_if
+
+//------------ vat to --------------------
+
+getscreen
+
+if_pixel_in(176, 79, 176, 79, 7491570)
+   //------------- tang 1 ------------
+   LCLICK(112,122)  // 3344681
+   waitms(103)
+   LCLICK(52,117)  // 3213609
+   waitms(103)
+   LCLICK(55,58)  // 16516
+   waitms(103)
+   LCLICK(82,88)  // 1640474
+   waitms(103)
+   LCLICK(111,58)  // 17289
+   waitms(103)
+   LCLICK(153,73)  // 1181712
+   waitms(103)
+   LCLICK(155,118)  // 3344681
+   waitms(103)
+end_if
+//--------------- Tang 2 ---------------
+if_pixel_in(172,88,172,88,3185381)
+   LCLICK(54,58)  // 147328
+   waitms(103)
+   LCLICK(53,119)  // 3738407
+   waitms(103)
+   LCLICK(83,89)  // 2493722
+   waitms(103)
+   LCLICK(112,120)  // 4524583
+   waitms(103)
+   LCLICK(157,122)  // 31675
+   waitms(103)
+   LCLICK(154,73)  // 1771793
+   waitms(103)
+   LCLICK(110,60)  // 5184
+   waitms(103)
+end_if
+
+//-----------------Tang 3-------------
+if_pixel_in(172,88,172,88,3448300)
+   LCLICK(54,118)  // 3804713
+   waitms(103)
+   LCLICK(56,56)  // 2247539
+   waitms(103)
+   LCLICK(97,73)  // 1509649
+   waitms(103)
+   LCLICK(98,119)  // 10976013
+   waitms(103)
+   LCLICK(139,118)  // 4725301
+   waitms(103)
+   LCLICK(156,89)  // 2165016
+   waitms(103)
+   LCLICK(127,56)  // 477407
+   waitms(103)
+end_if
+
+//----------------- Tang 4----------------
+
+if_pixel_in(174,88,174,88,6384257)
+   LCLICK(54,90)  // 1640728
+   waitms(103)
+   LCLICK(69,59)  // 1083833
+   waitms(103)
+   LCLICK(97,90)  // 3151643
+   waitms(103)
+   LCLICK(69,120)  // 7368825
+   waitms(103)
+   LCLICK(126,121)  // 3870512
+   waitms(103)
+   LCLICK(154,90)  // 1640728
+   waitms(103)
+   LCLICK(124,59)  // 4490409
+   waitms(103)
+end_if
+
+//----------------Tang 5------------
+if_pixel_in(170,80,170,80,11197425)
+   waitms(100)
+   LCLICK(55,119)  // 3870506
+   waitms(103)
+   LCLICK(54,59)  // 12397
+   waitms(103)
+   LCLICK(99,74)  // 1509650
+   waitms(103)
+   LCLICK(98,119)  // 11041805
+   waitms(103)
+   LCLICK(140,121)  // 4922167
+   waitms(103)
+   LCLICK(154,90)  // 2165016
+   waitms(103)
+   LCLICK(124,61)  // 3898532
+   waitms(103)
+end_if
+
+//----------------Tang 6------------
+if_pixel_in(177,87,177,87,10439761)
+   waitms(100)
+   LCLICK(111,120)  // 5119789
+   waitms(103)
+   LCLICK(82,88)  // 1509142
+   waitms(103)
+   LCLICK(55,119)  // 3280426
+   waitms(103)
+   LCLICK(55,60)  // 5184
+   waitms(103)
+   LCLICK(111,60)  // 5184
+   waitms(103)
+   LCLICK(154,120)  // 4133677
+   waitms(103)
+   LCLICK(153,74)  // 1247505
+   waitms(103)
+end_if
+
+//------------ phu kien --------------------
+
+getscreen
+
+if_pixel_in(193, 60, 193, 60, 7267)
+   if_pixel_in(40, 185, 40, 185, 2991839)
+      waitms(100)
+      LCLICK(32,153)  // x
+      waitms(100)
+   else
+      LCLICK(126,61)  // 1
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(146,61)  // 2
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(173,62)  // 3
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(194,59)  // 4
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(219,62)  // 5
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(244,60)  // 6
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(124,87)  // 7
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(146,86)  // 8
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(169,86)  // 9
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(195,87)  // 10
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(218,87)  // 11
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      LCLICK(243,86)  // 12
+      waitms(123)
+      LCLICK(114,105)  // ok
+      waitms(134)
+      if_pixel_in(130, 80, 130, 80, 12574180)
+         waitms(100)
+         beep(900,900)
+         print("  Không còn trang phục để kích hoạt")
+         waitms(5000)
+      end_if
+   end_if
+end_if
+
+//$clr = pxl(130,80)
+//print($clr)
+//wait(1)

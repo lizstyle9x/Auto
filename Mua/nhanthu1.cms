@@ -1,0 +1,55 @@
+﻿#name("thu2")
+#autorun
+$tk = TFREAD("TaiKhoan\taikhoan.txt", 2)
+$wnd = wndfind($tk)
+wndSize($wnd, 1016, 639)
+hset($wnd, 1)
+LCLICK(-1, -1)
+waitms(300)
+$page = TFCOUNT("MailItems.txt")
+TFREADARR("MailItems.txt", $arr)
+print("Tong so trang: ", $page)
+
+getscreen
+if_pixel_in(999,622, 999,622, 1391735, 1917561)
+   LCLICK(700,565)
+   $var = 1
+   waitms(800)
+end_if
+
+getscreen
+if (pxl(113,83) = 533833)
+   for($i = 0, $i < $page)
+      
+      // BẢO VỆ: Chỉ xử lý nếu dòng (trang) này có dữ liệu tọa độ
+      if(STRLEN($arr[$i]) > 2)
+         UNDEFINE($arr1)
+         strseparate($arr[$i], "|", $arr1)
+         $hang = arrsize($arr1)
+         
+         for($g = 0, $g < $hang)
+            UNDEFINE($adr2)
+            strseparate($arr1[$g], ",", $adr2)
+            
+            // LCLICK chọn Hàng thư
+            LCLICK(320, $adr2[0]*50 + 90)
+            waitms(250) // Tăng nhẹ delay để tránh game giật lag không nhận click
+            
+            // LCLICK nhận Vật phẩm trong Ô
+            LCLICK($adr2[1]*65 + 475, 480)
+            waitms(250)
+         end_cyc
+      end_if
+      
+      // Chuyển trang / Xử lý xong 1 trang
+      waitms(200)
+      LCLICK(455,496)
+      waitms(600) // BẮT BUỘC ĐỢI TỪ 0.5s - 1s ĐỂ GAME LOAD TRANG THƯ MỚI
+      
+   end_cyc
+   
+   // Tắt hòm thư
+   LCLICK(855,70)
+end_if
+
+halt(0)

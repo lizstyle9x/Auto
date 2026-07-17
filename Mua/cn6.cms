@@ -1,0 +1,310 @@
+﻿#autorun
+#name("vat-to")
+#includer("sub.xml")
+team(1,1,2)
+Getscreen
+//--------------MuaTina------------------
+if(pxl(214,125) = 133055)
+   halt
+end_if
+if(pxl(214,124) = 464960)
+   halt
+end_if
+if(pxl(216,126) = 996)
+   halt
+end_if
+if(pxl(185,106) = 7928575)
+   halt
+end_if
+//inmau(185,106)
+//inmau(162,134)
+//if($vt = 0)
+//------------- boss 1 -------------------
+if(pxl(171,73) = 5195186)
+   if(pxl(119,133) = 4868682)
+      if(pxl(62,133) = 6184542)
+         LCLICK(110,107)  // 1
+         waitmms(1000)
+      end_if
+   end_if
+   
+   if(pxl(62,133) = 6184542)
+      if(pxl(62,81) = 7566195)
+         LCLICK(54,106)  // 2
+         waitmms(1000)
+      end_if
+   end_if
+   
+   if(pxl(62,81) = 7566195)
+      if(pxl(91,108) = 6842472)
+         LCLICK(55,53) // 3
+         waitmms(1000)
+      end_if
+   end_if
+   
+   if(pxl(91,108) = 6842472)
+      if(pxl(120,80) = 10066329)
+         LCLICK(86,79)  // 4
+         waitmms(1000)
+      end_if
+   end_if
+   
+   if(pxl(162,94) = 10197915)
+      if(pxl(120,80) = 10066329)
+         LCLICK(113,56)  // 5
+         waitmms(1000)
+      end_if
+   end_if
+   
+   if(pxl(162,94) = 10197915)
+      if(pxl(162,134) = 6776679)
+         LCLICK(153,71)  // 6
+         waitmms(1000)
+      end_if
+   end_if
+   
+   if(pxl(162,94) = 2917362)
+      if(pxl(162,134) = 6776679)
+         LCLICK(154,106)  // 7
+         waitmms(1000)
+      end_if
+   end_if
+end_if
+
+
+//---------- boss 2 -----------------
+if(pxl(171,73) = 10391997)
+   if(pxl(62,78) = 6776679)
+      if(pxl(64,133) = 6842472)
+         waitms(1000)
+         LCLICK(54,60)  // 1
+         waitms(1000)
+      end_if
+   end_if
+   if(pxl(64,133) = 6842472)
+      if(pxl(62,78) = 609726)
+         waitms(1000)
+         LCLICK(54,106)  // 2
+         waitms(1000)
+      end_if
+   end_if
+   if(pxl(64,133) = 14190592)
+      if(pxl(92,107) = 9539985)
+         waitms(1000)
+         LCLICK(83,81)  // 3
+         waitms(1000)
+      end_if
+   end_if
+   if(pxl(121,133) = 10066329)
+      if(pxl(92,107) = 4831580)
+         waitms(1000)
+         LCLICK(111,111)  // 4
+         waitms(1000)
+      end_if
+   end_if
+   if(pxl(121,133) = 2399171)
+      if(pxl(164,133) = 11645361)
+         waitms(1000)
+         LCLICK(153,114)  // 5
+         waitms(1000)
+      end_if
+   end_if
+   if(pxl(163,93) = 8289918)
+      if(pxl(164,133) = 14518514)
+         waitms(1000)
+         LCLICK(153,72)  // 6
+         waitms(1000)
+      end_if
+   end_if
+   if(pxl(119,79) = 7105644)
+      if(pxl(164,133) = 14518514)
+         waitms(1000)
+         LCLICK(111,56)  // 7
+         waitms(1000)
+         $vt = 2
+      end_if
+   end_if
+end_if
+
+
+//------------- boss 3 --------
+if(pxl(76,79) = 7237230)
+   if(pxl(63,106) = 5921370)
+      LCLICK(53,84)  // 1
+      
+      
+   end_if
+end_if
+if(pxl(76,79) = 7237230)
+   if(pxl(63,106) = 11477)
+      LCLICK(68,58)  // 2
+      
+      
+   end_if
+end_if
+if(pxl(105,106) = 5723991)
+   if(pxl(63,106) = 11477)
+      LCLICK(95,81)  // 3
+      
+      
+   end_if
+end_if
+if(pxl(105,106) = 32045)
+   if(pxl(77,133) = 12369084)
+      LCLICK(64,112)  // 4
+      
+      
+   end_if
+end_if
+if(pxl(133,133) = 8882055)
+   if(pxl(77,133) = 5882073)
+      LCLICK(122,114)  // 5
+      
+      
+   end_if
+end_if
+if(pxl(133,133) = 12081107)
+   if(pxl(161,106) = 10526880)
+      LCLICK(152,83)  // 6
+      
+      
+   end_if
+end_if
+if(pxl(133,133) = 12081107)
+   if(pxl(134,79) = 7105644)
+      LCLICK(123,59)  // 7
+      
+      
+   end_if
+end_if
+//------------- boss 4 ----------
+if(pxl(62,134) = 10000536)
+   if(pxl(62,79) = 7039851)
+      LCLICK(54,111)  // 1
+      
+      
+   end_if
+end_if
+if(pxl(62,134) = 4686054)
+   if(pxl(62,79) = 7039851)
+      LCLICK(54,57)  // 2
+      
+      
+   end_if
+end_if
+if(pxl(105,94) = 10921638)
+   if(pxl(62,79) = 14519552)
+      LCLICK(97,72)  // 3
+      
+      
+   end_if
+end_if
+if(pxl(105,94) = 6475632)
+   if(pxl(105,134) = 11711154)
+      LCLICK(96,111)  // 4
+      
+      
+   end_if
+end_if
+if(pxl(149,133) = 11711154)
+   if(pxl(105,134) = 5224398)
+      LCLICK(138,112)  // 5
+      
+      
+   end_if
+end_if
+if(pxl(163,106) = 9408399)
+   if(pxl(149,133) = 14584563)
+      LCLICK(154,80)  // 6
+      
+      
+   end_if
+end_if
+if(pxl(163,106) = 31978)
+   if(pxl(133,179) = 3302798)
+      LCLICK(124,58)  // 7
+      
+      
+   end_if
+end_if
+if(pxl(163,106) = 31978)
+   if(pxl(133,179) = 3302799)
+      LCLICK(124,58)  // 7
+      
+      
+   end_if
+end_if
+//------------- boss 5 ----------
+if(pxl(119,133) = 4868682)
+   if(pxl(91,106) = 7105644)
+      LCLICK(110,110)  // 1
+      
+      
+   end_if
+end_if
+if(pxl(119,133) = 8122)
+   if(pxl(91,106) = 7105644)
+      LCLICK(82,85)  // 2
+      
+      
+   end_if
+end_if
+if(pxl(119,133) = 8122)
+   if(pxl(63,132) = 9342606)
+      LCLICK(52,113)  // 3
+      
+      
+   end_if
+end_if
+if(pxl(62,79) = 10987431)
+   if(pxl(63,132) = 1423463)
+      LCLICK(53,61)  // 4
+      
+      
+   end_if
+end_if
+if(pxl(62,79) = 2403280)
+   if(pxl(120,78) = 8684676)
+      LCLICK(111,58)  // 5
+      
+      
+   end_if
+end_if
+if(pxl(162,132) = 10855845)
+   if(pxl(120,78) = 10837700)
+      LCLICK(154,108)  // 6
+      
+      
+   end_if
+end_if
+if(pxl(162,132) = 1875176)
+   if(pxl(162,93) = 6447714)
+      LCLICK(151,73)  // 7
+      
+      
+   end_if
+end_if
+
+////end_if
+
+////if($vt = 2)
+////   LCLICK(257,12)  // tat tui.
+////   wait(1)
+////   LCLICK(184,149)  // mo tui.
+////   wait(2)
+////   LCLICK(126,22)  // vat to.
+////   wait(1)
+////   $vt = 0
+////end_if
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+﻿#autorun
+wait(3)
+tfclear("progress.txt")
+wait(1)
+halt

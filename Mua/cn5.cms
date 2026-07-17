@@ -1,0 +1,18 @@
+﻿#autorun
+#name ("tien-hoa")
+#includer("sub.xml")
+team(1,1,2)
+getscreen
+if(pxl(196,163) = 14214373)
+   LCLICK(188,132)  // 5539242
+end_if
+
+if(pxl(113,137) = 9809597)
+   if(pxl(205,152) = 4018880)
+      LCLICK(198,124)  // tien hoa
+      wait(2)
+   end_if
+end_if
+if(pxl(176,160) = 1208899)
+   halt
+end_if

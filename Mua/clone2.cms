@@ -1,0 +1,134 @@
+﻿#autorun
+#name("Clone 2 Team 1")
+#includer("heart.jpg")
+team(3,5,6)
+GetScreen
+//#includer("ht\\mkn.txt")   // load mkn
+if(pxl(273,169) = 12252927)
+   LCLICK(270,129)
+   rsb()
+end_if
+clone()
+#includer("ht\\heo.jpg")
+Getscreen
+if_pixel_in(144,76,144,76,6405864)
+   //   quettd(10,50,291,185)
+   //   inmau(165,178)
+   mkn()
+   //   waitms(3000)
+   //   keypress(#1)
+   //   keypress(#2)
+   //   keypress(#3)
+   //   keypress(#4)
+   //   waitms(500)
+   //   queotrai(2000)
+   keypress(#p)
+   wait(1)
+end_if
+getscreen
+if($lthe = 0)
+   if(pxl(263,38) = 7434078)
+      if(pxl(264,38) = 5856607)
+         $lose = $lose + 1
+         print(" lose:  ", $lose)
+      end_if
+   end_if
+   if(pxl(263,38) = 255)
+      if(pxl(264,38) = 14875391)
+         wait(1)
+         inc($win)
+         print("======== ", $Win, " ========")
+         waitms(1500)
+         //         LCLICK(23,30)  // 1
+         //         LCLICK(23,56)  // 1
+         //         LCLICK(23,78)  // 1
+         //         LCLICK(23,102)  // 1
+         //         LCLICK(23,127)  // 1
+         
+         //         LCLICK(42,30)  // 2
+         //         LCLICK(42,56)  // 2
+         //         LCLICK(42,78)  // 2
+         //         LCLICK(42,102)  // 2
+         //         LCLICK(42,127)  // 2
+         
+         //         LCLICK(57,30)  // 3
+         //         LCLICK(57,56)  // 3
+         //         LCLICK(57,78)  // 3
+         //         LCLICK(57,102)  // 3
+         //         LCLICK(57,127)  // 3
+         
+         //LCLICK(77,30)  // 4
+         //LCLICK(77,56)  // 4
+         //LCLICK(77,78)  // 4
+         //LCLICK(77,102)  // 4
+         //LCLICK(77,127)  // 4
+         
+         //LCLICK(93,30)  // 5
+         //LCLICK(93,56)  // 11850977
+         //LCLICK(93,78)  // 4296126
+         //LCLICK(93,102)  // 2037276
+         //LCLICK(93,127)  // 1315349
+         
+         //LCLICK(114,30)  // 6
+         //LCLICK(114,56)  // 11850977
+         //LCLICK(114,78)  // 4296126
+         //LCLICK(114,102)  // 2037276
+         //LCLICK(114,127)  // 1315349
+         
+         //LCLICK(132,30)  // 7
+         //LCLICK(132,56)  // 11850977
+         //LCLICK(132,78)  // 4296126
+         //LCLICK(132,102)  // 2037276
+         //LCLICK(132,127)  // 1315349
+         
+         //LCLICK(148,30)  // 8
+         //LCLICK(148,56)  // 11850977
+         //LCLICK(148,78)  // 4296126
+         //LCLICK(148,102)  // 2037276
+         //LCLICK(148,127)  // 1315349
+         
+         //LCLICK(169,30)    // 9
+         //LCLICK(169,56)
+         //LCLICK(169,78)
+         //LCLICK(169,102)
+         //LCLICK(169,127)
+         
+         //LCLICK(184,30)
+         //LCLICK(184,56)
+         //LCLICK(184,78)
+         //LCLICK(184,102)
+         //LCLICK(184,127)
+         
+         //         LCLICK(201,30)
+         //         LCLICK(201,56)
+         //         LCLICK(201,78)
+         //         LCLICK(201,102)
+         //         LCLICK(201,127)
+         
+         //LCLICK(218,30)
+         //LCLICK(218,56)
+         //LCLICK(218,78)
+         //LCLICK(218,102)
+         //LCLICK(218,127)
+         
+         LCLICK(234,30)
+         LCLICK(234,56)
+         LCLICK(234,78)
+         LCLICK(234,102)
+         LCLICK(234,127)
+         
+         //         LCLICK(255,30)
+         //         LCLICK(255,56)
+         //         LCLICK(255,78)
+         //         LCLICK(255,102)
+         //         LCLICK(255,127)
+         wait(1)
+         //         LCLICK(115,94)  // ok.
+         //         //         lup(115,95)
+         //         //         wait(2)
+         //         //LCLICK(100,56)
+         //         //rsb()
+         $lthe = 2
+      end_if
+   end_if
+end_if

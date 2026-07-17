@@ -1,14 +1,14 @@
 ﻿#autorun
-#name("sc1")
+#name("sc9")
 #includer("sub.xml")
-team(1,1,2)
+team(1,3,2)
 taophong(0)
 getscreen
 dsl()
 //--------------- Chon Pb -----------------
 if(pxl(62,33) = 1191759)
    if(pxl(63,34) = 141636)
-      chonpb(1,1,0)
+      chonpb(1,9,0)
       moiban()
       waitms(500)
       mangbau()
@@ -21,28 +21,19 @@ if_pixel_in(144,76,144,76,6405864)
    if(pxl(283,152) = 1981681)
       LCLICK(275,120)
    end_if
-   mkn()
    //   quettd(10,50,291,185)
    //   inmau(148,180)
-   
-   if($toc = 0)
-      queotrai(2200)
-      keypress(39)
-      $toc = 1
+   inc($turn)
+   print("turn = ", $turn)
+   if($bow = 0)
+      keypress(#z)
+      keypress(#x)
+      waitms(500)
+      keypress(#b)
+      $bow = 1
    end_if
-   if($toc = 1)
-      inc($turn)
-      print("turn = ", $turn)
-      if($bow = 0)
-         keypress(#z)
-         keypress(#x)
-         waitms(500)
-         keypress(#b)
-         $bow = 1
-      end_if
-      dame(44,10)
-      wait(4)
-   end_if
+   dame(70,15)
+   wait(4)
 end_if
 //--------------MuaTina------------------
-latthe(15)
+latthe(1,15)

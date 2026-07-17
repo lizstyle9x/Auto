@@ -1,5 +1,5 @@
 ﻿#autorun
-#name("sc1")
+#name("sc8")
 #includer("sub.xml")
 team(1,1,2)
 taophong(0)
@@ -8,7 +8,7 @@ dsl()
 //--------------- Chon Pb -----------------
 if(pxl(62,33) = 1191759)
    if(pxl(63,34) = 141636)
-      chonpb(1,1,0)
+      chonpb(1,8,0)
       moiban()
       waitms(500)
       mangbau()
@@ -45,4 +45,4 @@ if_pixel_in(144,76,144,76,6405864)
    end_if
 end_if
 //--------------MuaTina------------------
-latthe(15)
+latthe(1,15)

@@ -1,0 +1,43 @@
+﻿#name ("Ruong-TT")
+#autorun
+#includer("sub.xml")
+team(1,1,2)
+getscreen
+//--------------MuaTina------------------
+if($run = 0)
+   hintpopup("Vào két Guild. Đặt rương ở ô đầu tiên của Túi Đạo cụ. (chú ý: speed x5 sẽ nhanh hơn)")
+   $run = 1
+end_if
+//--------------MuaTina------------------
+////inmau(167,50)
+if(pxl(167,50) = 1460852) // ket guild.
+   LCLICK(260,85)  // trang bi.
+   $lu = $lu + 1
+   print("$lu = ", $lu)
+   waitms(2000)
+   getscreen
+   if(pxl(172,62) = 13426919)
+      halt
+   end_if
+   LCLICK(163,28) // cli.
+   waitms(500)
+   LCLICK(175,38) // mo.
+   waitms(500)
+end_if
+if(pxl(146,122) = 464596)
+   waitms(1000)
+   LCLICK(142,84)  // start
+   waitms(500)
+end_if
+if(pxl(146,122) = 5066061)
+   if(pxl(195,170) != 2307141)
+      waitms(1500)
+      $tat = $tat + 1
+      print("$tat = ", $tat)
+      LCLICK(200,10)  // tat.
+      waitms(600)
+      LCLICK(115,93)  // ok
+      waitms(300)
+   end_if
+end_if
+//--------------MuaTina------------------
