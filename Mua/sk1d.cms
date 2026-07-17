@@ -23,7 +23,7 @@ if_pixel_in(144,76,144,76,6405864)
       keyDown(75)
    end_if
    getscreen
-   if(pxl(11,128) = 6303744,7945472)
+   if((pxl(11,128) = 7945472) | (pxl(11,128) = 6303744))
       $toc = 1
       keyUp(75)
       if($bow = 0)
