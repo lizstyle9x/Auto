@@ -1,0 +1,912 @@
+﻿sub(team,$tk,$td1,$td2)
+   $tk = TFREAD("taikhoan\\taikhoan.txt",$tk)
+   $x = TFREAD("taikhoan\\toado.txt",$td1)
+   $y = TFREAD("taikhoan\\toado.txt",$td2)
+   $reg = TFREAD("ht\\checkrg.txt",1)
+   $btn = TFREAD("ht\\btn.txt",1)
+   $Guild = TFREAD("ht\\Guild.txt",1)
+   $SoluongClone = TFREAD("ht\\SoluongClone.txt", 1)
+   $wnd1 = wndfind($tk)
+   $vk = TFREAD("ht\\gocvk.txt",1)
+   $time = TFREAD("ht\\time.txt",1)
+   $time = $time*60*1.7
+   waitms(100)
+   wndSize($wnd1,300,200)
+   wndPos($wnd1,$x,$y)
+   $nhatky = STRCONCAT($tk," Win:  ", $Win , " lose:  ", $lose, "   Relog:  ",$re)
+   hsettext($wnd1,$nhatky)
+   hset($wnd1,1)
+   LCLICK(-1,-1)
+   getscreen
+end_sub
+
+//--------------------------------
+sub(rsb)
+   $xhtb = 0
+   $ow = 0
+   $lthe = 0
+   $turn = 0
+   $rgd = 0
+   $bo = 0
+   $mpo = 0 //mua pow
+   $bow = 0 //pow
+   $turn = 0
+   $dung = 0
+   $mkn = 0
+   $mkn1 = 0
+   $mkn2 = 0
+   $mkn3 = 0
+   $mkn4 = 0
+   $mkn5 = 0
+   $mkn6 = 0
+   $mkn7 = 0
+   $mkn8 = 0
+   $mkn9 = 0
+   $mkn10 = 0
+   $mknlt = 0
+   $mknld = 0
+   $mknlg = 0
+   $goc = 0
+   $goc1 = 0
+   $q = 0
+   $q1 = 0
+   $q12 = 0
+   $ss = 0
+   $buff = 0
+   $b = 0
+   $i = 0
+   $moi = 0
+   $moi1 = 0
+   $q2=0
+   $relog = 0
+   $bd=0
+   $ban=0
+   $quay = 0
+   $lo = 0
+   $va = 0
+   $dntb = 0
+   $btu = 0
+   $mknlt = 0
+   $yu = 0
+   $vl = 0
+   $rn = 0
+   $toc = 0
+   $pet = 0
+   $vt = 0
+   //print("rsb")
+end_sub
+//--------------------------------
+
+if($wnd1 = 0)
+   $re=$re+1
+   print( "Relog:  ",$re)
+   $mkn = 0
+   $mkn1 = 0
+   $mkn2 = 0
+   $mkn3 = 0
+   $mkn4 = 0
+   $mkn5 = 0
+   $mkn6 = 0
+   $mkn7 = 0
+   $mkn8 = 0
+   $mkn9 = 0
+   $mkn10 = 0
+   $mknlt = 0
+   $mknlt1 = 0
+   $mknld = 0
+   $goc = 0
+   $goc1 = 0
+   $q = 0
+   $q1 = 0
+   $ss = 0
+   $buff = 0
+   $b = 0
+   $i = 0
+   $moi = 0
+   $moi1 = 0
+   $relog = 0
+   $bd = 0
+   $vt = 0
+   $ban = 0
+   $Lmh = 0
+   $loilatthe = 0
+   $loiss = 0
+   $Turn = 0
+   $vitri = 0
+   $luc = 0
+   $Q = 0
+   $goc2 = 0
+   $goc3 = 0
+   $goc = 0
+   $xhtb = 0
+   wait(16)
+end_if
+getscreen
+if_pixel_in(280,34,280,34,12713677)
+   $mkn = $mkn+1
+   if($mkn > $time)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      print("mkn trong pb")
+   end_if
+end_if
+
+if_pixel_in(255,146,255,146,8229832)  //mkn loadding    1x
+   $mknld = $mknld +1
+end_if
+if($mknld >= 500)
+   PostMessage($wnd1, 0x0010, 0, 0)
+   rsb()
+   print("mkn loadding")
+end_if
+
+if(pxl(144,33) = 2310996)
+   $mkn2 = $mkn2+1
+   if($mkn2 > $time)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      print("mkn trong avc")
+   end_if
+end_if
+
+if_pixel_in(42,134,42,134,8642283) 
+   $mkn3 = $mkn3+1
+   if($mkn3 >= 2500)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      print("mkn Sanh Chinh")
+   end_if
+end_if
+
+if_pixel_in(90,65,90,65,1115942,1116457)
+   $mkn4 = $mkn4+1
+   if($mkn4 >= 60)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      print("mkn load tran")
+   end_if
+end_if
+
+if_pixel_in(75,34,75,34,0)
+   $mkn5 = $mkn5+1
+   if($mkn5 >= 35)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      print("mhd")
+   end_if
+end_if
+
+if_pixel_in(172,111,172,111,10664902)
+   $mkn6 = $mkn6+1
+   if($mkn6 >= 5)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+   end_if
+end_if
+
+if(pxl(94,92) = 9554888)
+   if(pxl(126,108) = 16777215)
+      inc($xhtb)
+      print("mkn dn lai  = ",$xhtb)
+      if($xhtb => 60)
+         PostMessage($wnd1, 0x0010, 0, 0)
+         rsb()
+         print("mkn dn lai 1")
+      end_if
+   end_if
+end_if
+
+if_pixel_in(143,126,143,126,544881)
+   PostMessage($wnd1, 0x0010, 0, 0)
+   rsb()
+   print("tai danh sach tb")
+end_if
+
+if_pixel_in(145,125,145,125,52479)
+   PostMessage($wnd1, 0x0010, 0, 0)
+   rsb()
+   print("dn that bai")
+end_if
+
+
+if_pixel_in(75,34,75,34,16777215)
+   $mkn7=$mkn7+1
+      print("mkn mht = ",$mkn7)
+   if($mkn7>=35)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      $mkn7=0
+      print("mht")
+   end_if
+end_if
+
+if_pixel_in(53,36,53,36,6526117,7380399)
+   $mkn8=$mkn8+1
+      print("mkn mhv = ",$mkn8)
+   if($mkn8>=35)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      $mkn8=0
+      print("mkn mhv")
+   end_if
+end_if
+
+if_pixel_in(113,65,113,65,7776445,6856117)
+   $mkn9=$mkn9+1
+   if($mkn9>=35)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      rsb()
+      print("mkn mhv1")
+   end_if
+end_if
+
+//------------------ tat vv 3x2 ------------
+if(pxl(114,109) = 3895432)
+   LCLICK(171,93)  // tat chuk phuk.
+   print("tat chuk phuk")
+   waitms(600)
+end_if
+if(pxl(193,56) = 13691126)
+   if(pxl(214,57) = 13691126)
+      LCLICK(231,12)  // doi coin.
+   end_if
+end_if
+if(pxl(20,44) = 659513)
+   if(pxl(24,44) = 4356782)
+      LCLICK(271,149)  // outp.
+   print("outp1")
+   end_if
+end_if
+if(pxl(40,48) = 8691154)
+   if(pxl(40,68) = 13062023)
+      LCLICK(271,149) // outp.
+   print("outp2")
+   end_if
+end_if
+if(pxl(105,65) = 10283775)// boss TG
+   if(pxl(182,65) = 10283775)
+      LCLICK(143,134) 
+   print("boss TG")
+      waitms(500)
+   end_if
+end_if
+//if_pixel_in(125,110,125,110,7444393)//tatcp
+//   waitms(300)
+//   LCLICK(191,63)
+//   print("tatcp")
+//end_if
+if_pixel_in(167,67,167,67,5719523)//tattb
+   LCLICK(232,43) 
+   print("//tattb")
+end_if
+if_pixel_in(252,130,252,130,667996)//tatgy
+   LCLICK(268,101)  
+   print("tatgy")
+end_if
+if(pxl(93,49) = 1139154)// tat info.
+   if(pxl(210,43) = 1489136)
+      LCLICK(201,12)  
+   print(" tat info.")
+      waitms(1000)
+   end_if
+end_if
+if(pxl(97,103) = 7778774)// tb day la pb ko free
+   if(pxl(98,103) = 12113899)
+      LCLICK(142,97)  
+   print("tb day la pb ko free1")
+   end_if
+end_if
+if(pxl(98,105) = 18021)// tb day la pb ko free
+   if(pxl(208,113) = 18021)
+      LCLICK(142,97) 
+   print("tb day la pb ko free2")
+   end_if
+end_if
+if(pxl(98,107) = 7444393)// tat gy di 1 minh.
+   if(pxl(168,112) = 7444393)
+      LCLICK(108,96)
+      wait(1)  
+   print("tat gy di 1 minh.")
+   end_if
+end_if
+if(pxl(97,107) = 16777215) // tat goi y.
+   if(pxl(98,107) = 18021)
+      LCLICK(110,95)  
+   print("tat goi y.")
+   end_if
+end_if
+if(pxl(113,104) = 9618676)// giai dau lol.
+   if(pxl(129,104) = 8593812)
+      LCLICK(162,102) 
+   print("//giai dau lol.")
+      wait(1)
+   end_if
+end_if
+
+//--------------------------------------------------
+
+sub(clone)
+   if(pxl(86,44) = 2533838)
+      if(pxl(87,44) = 3056330)
+         LCLICK(197,16)  // tat vip.
+      end_if
+   end_if
+   if_pixel_in(69,53,69,53,1196915)   // tat goi y di 1 minh
+      LCLICK(47,37)  // 8095630
+      $mknlt = 0
+   end_if
+   if(pxl(61,38) = 6982099)  // thoat phong gmq.
+      LCLICK(272,149)
+   end_if
+   if_pixel_in(269,170,269,170,861770)// thoat phong pb
+      LCLICK(272,153)  // 722285
+   end_if
+   if_pixel_in(113,96,113,96,799068) // dong y thoat phong pb
+      LCLICK(106,96)  // 799582
+   end_if
+   if_pixel_in(183,38,183,38,7117222)   //thoat avc
+      LCLICK(272,149)
+      waitms(1000)
+   end_if
+   if(pxl(83,85) = 10538208) // nhan moi
+      if(pxl(86,85) = 7049642)
+         LCLICK(113,103)
+      end_if
+   end_if
+end_sub
+//--------------------------------
+sub(taophong,$tp)  /// 0 avc - 1pg xong
+   getscreen
+   if_pixel_in(39,137,39,137,2049901)   // click ai vien chinh
+      if($tp = 0)
+         LCLICK(244,123)  // 14541534
+      else
+         LCLICK(162,59)  // 3044751
+      end_if
+      waitms(500)
+   end_if
+   getscreen
+   if_pixel_in(183,38,183,38,7117222)   // click tao phong
+      LCLICK(205,135)  // 2522809
+      waitms(1000)
+   end_if
+end_sub
+//--------------------------------
+sub(dsl)
+   //------- khoa slot -------
+   if($SoluongClone = 0)
+      if(pxl(73,55) = 3945886) //sl1
+         LCLICK(89,29)
+         waitms(500)
+      end_if
+      if(pxl(19,110) = 4995508) // sl2
+         LCLICK(33,75)
+         waitms(500)
+      end_if
+      if(pxl(73,110) = 4995508) // sl3
+         LCLICK(73,71)
+         waitms(500)
+      end_if
+   end_if
+   if($SoluongClone = 1)
+      if(pxl(19,110) = 4995508)  // sl2
+         LCLICK(33,75)
+         waitms(500)
+      end_if
+      if(pxl(73,110) = 4995508)  // sl3
+         LCLICK(73,71)
+         waitms(500)
+      end_if
+   end_if
+   if($SoluongClone = 2)
+      if(pxl(73,110) = 4995508)  // sl3
+         LCLICK(73,71)
+         waitms(500)
+      end_if
+   end_if
+   //print($SoluongClone)
+end_sub
+//--------------------------------
+sub(moiban)
+   moi:
+   waitms(500)
+   //-------- moi ban -----------
+   if($Guild = 1)// co g.
+      $m = 150
+   else
+      $m = 132
+   end_if
+   getscreen
+   if(pxl(73,55) = 3945886)  //sl1
+      LCLICK(89,29)
+      waitms(400)
+      LCLICK(89,29)
+      waitms(400)
+      LCLICK(226,133)
+      waitms(300)
+   else
+      if(pxl(19,110) = 4995508)  // sl2
+         LCLICK(33,75)
+         waitms(400)
+         LCLICK(33,75)
+         waitms(400)
+         LCLICK(226,133)
+         waitms(400)
+      else
+         if(pxl(73,110) = 4995508)  // sl3
+            LCLICK(73,71)
+            waitms(400)
+            LCLICK(73,71)
+            waitms(400)
+            LCLICK(226,133)
+            waitms(400)
+         end_if
+      end_if
+   end_if
+   waitms(500)
+   getscreen
+   if_pixel_in(144,65,144,65,998255)
+      LCLICK($m,47)
+      LCLICK(164,57)  // bb
+      waitms(300)
+      LCLICK(164,64)  // 1
+      waitms(300)
+      LCLICK(165,72)  // 2
+      waitms(300)
+      LCLICK(165,82)  // 3
+      waitms(300)
+      LCLICK(164,91)  // 4
+      waitms(300)
+      LCLICK(165,100)  // 5
+      waitms(300)
+      LCLICK(164,108)  // 6
+      waitms(300)
+      LCLICK(176,34)  // tat
+   end_if
+   $moi = $moi +1
+   //print("moi = ", $moi)
+   if($moi <= 1)
+      goto(moi)
+   end_if
+end_sub
+//print("next ")
+//--------------------------------
+sub(batdau)
+   if(pxl(270,168) = 7967140)
+      //waitms(1000)
+      LCLICK(270,129)
+      rsb()
+      waitms(500)
+   end_if
+end_sub
+//--------------------------------
+sub(chonpb,$lpb,$pb,$dk)
+   $lpb =  30*$lpb + 55
+   if($pb <= 4)
+      $pb = $pb*35 + 45
+      $pb1 = 60
+   else
+      if(($pb > 4) & ($pb<=8))
+         $pb = $pb - 4
+         $pb =   $pb*35 + 45
+         $pb1 = 80
+      else
+         if(($pb > 8) & ($pb <= 12))
+            $pb = $pb - 8
+            $pb =  $pb*35 + 45
+            $pb1 = 60
+            LCLICK(219,82)  // 465210
+            LCLICK(219,82)  // 465210
+            LCLICK(219,82)  // 465210
+            LCLICK(219,82)  // 465210
+            LCLICK(219,82)  // 465210
+            LCLICK(219,82)  // 465210
+            LCLICK(219,82)  // 465210
+         else
+            if(($pb > 12) & ($pb <= 16))
+               $pb = $pb - 12
+               $pb =  $pb*35 + 45
+               $pb1 = 80
+               LCLICK(219,82)  // 465210
+               LCLICK(219,82)  // 465210
+               LCLICK(219,82)  // 465210
+               LCLICK(219,82)  // 465210
+               LCLICK(219,82)  // 465210
+               LCLICK(219,82)  // 465210
+               LCLICK(219,82)  // 465210
+            else
+               if(($pb > 16) & ($pb <= 20))
+                  $pb = $pb - 16
+                  $pb =  $pb*35 + 45
+                  $pb1 = 60
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+                  LCLICK(219,82)  // 465210
+               end_if
+            end_if
+         end_if
+      end_if
+   end_if
+   LCLICK($lpb,53)  // sc
+   waitms(200)
+   LCLICK($pb,$pb1)  // 1
+   waitms(200)
+   if( $btn <= 1 )
+   else
+      if($btn = 2)
+         if ($dk = 1)
+            LCLICK(108,133)  // 1611240
+            waitms(300)
+            LCLICK(217,48)  // 4159142
+         else
+            if ($dk = 2)
+               LCLICK(170,134)  // 4285312
+               waitms(300)
+               LCLICK(217,48)  // 4159142
+            end_if
+         end_if
+      else
+         if($btn = 3)
+            if ($dk = 1)
+               LCLICK(86,136)  // 1648690
+               waitms(300)
+               LCLICK(217,48)  // 4159142
+            else
+               if ($dk = 2)
+                  LCLICK(132,131)  // 8432834
+                  waitms(300)
+                  LCLICK(217,48)  // 4159142
+               else
+                  if ($dk = 3)
+                     LCLICK(196,134)  // 1650773
+                     waitms(300)
+                     LCLICK(217,48)  // 4159142
+                  end_if
+               end_if
+            end_if
+         else
+            if($btn = 4)
+               if ($dk = 1)
+                  LCLICK(81,133)  // 8433606
+                  waitms(300)
+                  LCLICK(217,48)  // 4159142
+               else
+                  if ($dk = 2)
+                     LCLICK(121,133)  // 7514047
+                     waitms(300)
+                     LCLICK(217,48)  // 4159142
+                  else
+                     if ($dk = 3)
+                        LCLICK(165,135)  // 1584980
+                        waitms(300)
+                        LCLICK(217,48)  // 4159142
+                     else
+                        if ($dk = 4)
+                           LCLICK(205,134)  // 1519187
+                           waitms(300)
+                           LCLICK(217,48)  // 4159142
+                        end_if
+                     end_if
+                  end_if
+               end_if
+            else
+               if($btn >= 5)
+                  if ($dk = 1)
+                     LCLICK(75,134)  // 8699864
+                     waitms(300)
+                     LCLICK(217,48)  // 4159142
+                  else
+                     if ($dk = 2)
+                        LCLICK(112,134)  // 16383997
+                        waitms(300)
+                        LCLICK(217,48)  // 4159142
+                     else
+                        if ($dk = 3)
+                           LCLICK(143,135)  // 8762566
+                           waitms(300)
+                           LCLICK(217,48)  // 4159142
+                        else
+                           if ($dk = 4)
+                              LCLICK(168,134)  // 9949148
+                              waitms(300)
+                              LCLICK(217,48)  // 4159142
+                           else
+                              if ($dk = 5)
+                                 LCLICK(201,135)  // 1584980
+                                 waitms(300)
+                                 LCLICK(217,48)  // 4159142
+                              end_if
+                           end_if
+                        end_if
+                     end_if
+                  end_if
+               end_if
+            end_if
+         end_if
+      end_if
+   end_if
+   waitms(200)
+   LCLICK(142,153)  // 67085
+   waitms(500)
+   $mknlt = 0
+end_sub
+
+//--------------------------------
+sub(mangbau)
+   if($q12 = 0)
+      LCLICK(233,39)
+      waitms(200)
+      LCLICK(250,39)
+      waitms(200)
+      LCLICK(267,39)
+      waitms(200)
+      LCLICK(270,63)
+      waitms(200)
+      LCLICK(270,63)
+      waitms(200)
+      LCLICK(270,63)
+      waitms(200)
+      inc($q12)
+   end_if
+   waitms(400)
+end_sub
+//--------------------------------
+sub(mkn)
+   $mkn = 0
+   $mkn1 = 0
+   $mkn2 = 0
+   $mkn3 = 0
+   $mkn4 = 0
+   $mkn5 = 0
+   $mkn6 = 0
+   $mkn7 = 0
+   $mkn8 = 0
+   $mkn9 = 0
+   $mkn10 = 0
+   $mknlt = 0
+   $mknld = 0
+   $mknlg = 0
+end_sub
+//--------------------------------
+sub(quettd,$1,$2,$3,$4)
+   getscreen
+   if_pixel_in($1,$2,$3,$4,6303744)
+      $12 = $_return1
+      print("if(pxl(",$12 +1,",",$_return2,") = 6303744,7945472)")
+   end_if
+   if_pixel_in($1,$2,$3,$4,7945472)
+      $13 = $_return1
+      print("if(pxl(",$13 +1,",",$_return2,") = 6303744,7945472)")
+   end_if
+   print(" ")
+   print("end_if")
+   print("end_if")
+   print(" ")
+end_sub
+//--------------------------------
+sub(inmau,$1,$2)//,$3,$4)
+   getscreen
+   print("if(pxl(",$1,",",$2,") = ",pxl($1,$2))
+   //print("if(pxl(",$3,",",$4,") = ",pxl($3,$4))
+   print(" ")
+   //print("end_if")
+   //print("end_if")
+   print(" ")
+end_sub
+//--------------------------------
+sub(queotrai,$minis)
+   //print("bo trai tinh ms")
+   keyPress(#a)
+   waitms(50)
+   keyPress(#left)
+   waitms(50)
+   keyPress(37)
+   waitms(50)
+   keyPress(#left)
+   waitms(50)
+   keyPress(#a)
+   waitms(50)
+   keyPress(#left)
+   waitms(200)
+   keydown(75)
+   waitms(50)
+   keydown(75)
+   waitms(50)
+   keydown(75)
+   waitms(50)
+   keydown(75)
+   waitms($minis)
+   keyUp(75)
+   //waitms(200)
+   //keyPress(#right)
+end_sub
+//--------------------------------
+sub(queophai,$inis)
+   //print("bo trai tinh ms")
+   keyPress(39)
+   waitms(50)
+   keyPress(#right)
+   waitms(50)
+   keyPress(#d)
+   waitms(50)
+   keyPress(#right)
+   waitms(50)
+   keyPress(#d)
+   waitms(50)
+   keyPress(#right)
+   waitms(200)
+   keydown(186)
+   waitms(50)
+   keydown(186)
+   waitms(50)
+   keydown(186)
+   waitms(50)
+   keydown(186)
+   waitms($inis)
+   keyUp(186)
+   //waitms(200)
+   //keyPress(#left)
+end_sub
+//--------------------------------
+sub(dame,$luc,$gvk)
+   if($luc = 0)
+      Keypress(#p)
+   else
+      for ($goc, $goc< $gvk - $vk)
+         keypress(38)
+      end_cyc
+      waitms(300)
+      #includer("ht\\buff.txt")
+      keydown(68)
+      $f = 1
+      if($luc > 97 )
+         $luc = 97
+      end_if
+      $luc1 =  50 + ($luc * 1.4)
+      $luc2 = int($luc1)
+      while($f = 1)
+         $fix = $fix + 1
+         if($fix => 6200)
+            $f =0
+            $fix = 0
+            keyUp(68)
+         end_if
+         getscreen
+         if_pixel_in($luc2,189,$luc2,189,670707,670706,3441096,3507660)
+            keyUp(68)
+            $fix = 0
+            $f = 0
+         end_if
+      end_cyc
+   end_if
+end_sub
+
+//--------------------------------
+sub(keoluc, $luc)
+   keydown(68)
+   $f = 1
+   //if($luc < 4 )
+   //  $luc = 4
+   // end_if
+   if($luc > 97 )
+      $luc = 97
+   end_if
+   $luc1 =  50 + ($luc * 1.4)
+   $luc2 = int($luc1)
+   while($f = 1)
+      $fix = $fix + 1
+      if($fix > = 150)
+         $f =0
+         $fix = 0
+         keyUp(68)
+      end_if
+      getscreen
+      if_pixel_in($luc2,189,$luc2,189,670707,670706,1719738,3507660,2449301,3044534)
+         keyUp(68)
+         $fix = 0
+         $f = 0
+      end_if
+   end_cyc
+end_sub
+
+//--------------------------------
+sub(kill,$kill)
+   if($win > $kill)
+      wait(4)
+      PostMessage($wnd1, 0x0010, 0, 0)
+      $win = 0
+      rsb()
+      print("kill")
+   end_if
+end_sub
+//--------------------------------
+sub(ts)
+   //turn("ts")
+   waitms(600)
+   keyPress(#r)
+   waitms(700)
+   keyPress(#1)
+   waitms(300)
+   keyPress(#1)
+   waitms(300)
+   keyDown(68)
+   waitms(50)
+   keyUp(68)
+end_sub
+//--------------------------------
+sub(thoat,$oat)
+   if($turn > $oat)
+      LCLICK(276,4)  // 13743513
+      wait(0.4)
+      LCLICK(114,94)  // 867435
+      wait(1)
+      rsb()
+   end_if
+end_sub
+//--------------------------------
+sub(latthe, $so_the)
+   getscreen
+   if(pxl(71,43) = 25067)
+      $mknlt = $mknlt + 1     
+      $k = 0        
+      while($k < $so_the)
+         $cot = $k % 14          
+         $hang = INT($k / 14)             
+         $posX = INT(($cot * 17.85) + 23.5)
+         $posY = INT(($hang * 24.25) + 30.5)        
+         LCLICK($posX, $posY)
+         waitms(800)        
+         $k = $k + 1
+      end_cyc     
+      LCLICK(115,97)  // Click xác nhận đóng (tọa độ 115,97)
+      $win=$win + 1
+      print(" Win:  ", $Win , " lose:  ", $lose, "   Relog:  ",$re)   
+      wait(16)
+      $bo = 0
+      $dung = 0
+      $mkn = 0
+      $mkn1 = 0
+      $mkn2 = 0
+      $mkn3 = 0
+      $mkn4 = 0
+      $mkn5 = 0
+      $mkn6 = 0
+      $mkn7 = 0
+      $mkn8 = 0
+      $mkn9 = 0
+      $mkn10 = 0
+      $mknld = 0
+      $goc = 0
+      $goc1 = 0
+      $q = 0
+      $q1 = 0
+      $ss = 0
+      $buff = 0
+      $b = 0
+      $i = 0
+      $moi = 0
+      $moi1 = 0
+      $q2=0
+      $relog = 0
+      $bd=0
+      $ban=0
+      $f=0
+      $Q = 0
+      $Lmh = 0
+      $Turn = 0
+      $loilatthe = 0
+      $vitri = 0
+      $loiss = 0
+   end_if
+end_sub
