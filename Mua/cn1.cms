@@ -1,4 +1,4 @@
-﻿#name :"Auto-nvNGAY"
+#name :"Auto-nvNGAY"
 $tk = TFREAD("taikhoan\taikhoan.txt",1)
 $hwnd1 = wndfind($tk)
 waitms(500)
@@ -7,44 +7,26 @@ if ($hwnd1 > 0 )
    
    $file_progress = "progress.txt"
    
-   IF (TFCOUNT($file_progress) > 1 )
-      $phoban = TFREAD($file_progress, 1)
-      $count = TFREAD($file_progress, 2)
+   // Đọc tiến trình và cấu hình phó bản từ file do C# ghi ra
+   IF (TFCOUNT($file_progress) > 2)
+      $phoban = TFREAD($file_progress, 1)      // Dòng 1: Phó bản bắt đầu chạy
+      $count = TFREAD($file_progress, 2)       // Dòng 2: Số lần đã chạy hiện tại
+      $end_phoban = TFREAD($file_progress, 3)  // Dòng 3: Phó bản kết thúc
    ELSE
+      // Dự phòng nếu file trống
       $phoban = 1
       $count = 1
+      $end_phoban = 12
    END_IF
    
-   
-   SWITCH($phoban)
-      CASE(1)
-         $max_runs = 4
-      CASE(2)
-         $max_runs = 4
-      CASE(3)
-         $max_runs = 4
-      CASE(4)
-         $max_runs = 4
-      CASE(5)
-         $max_runs = 4
-      CASE(6)
-         $max_runs = 4
-      CASE(7)
-         $max_runs = 4
-      CASE(8)
-         $max_runs = 4
-      CASE(9)
-         $max_runs = 4
-      CASE(10)
-         $max_runs = 4
-      CASE(11)
-         $max_runs = 4
-      CASE(12)
-         $max_runs = 4
-
-   END_SWITCH
-   
-   WHILE($phoban <= 12)
+   // Vòng lặp chạy từ phó bản bắt đầu đến phó bản kết thúc
+   WHILE($phoban <= $end_phoban)
+      
+      // Đọc số lần chạy tối đa cho phó bản hiện tại từ dòng (3 + phoban)
+      // Ví dụ: Phó bản 1 đọc dòng 4, Phó bản 2 đọc dòng 5...
+      $max_runs = TFREAD($file_progress, 3 + $phoban)
+      
+      // Nếu số lần chạy > 0 thì mới thực hiện chạy phó bản
       WHILE($count <= $max_runs)
          logwrite("S1 Đang di pho ban ", $phoban, " so lan : ", $count, " / ", $max_runs)
          
@@ -73,47 +55,21 @@ if ($hwnd1 > 0 )
                #include "sc11t.cms"
             CASE(12)
                #include "sc12t.cms"
-
          END_SWITCH
          
+         // Tăng số lần chạy hiện tại lên 1 và cập nhật lại tiến trình vào file
+         inc($count, 1)
+         TFWRITE($file_progress, $count, 2)
       END_CYC
       
+      // Reset số lần chạy về 1 cho phó bản kế tiếp
       inc($phoban, 1)
       $count = 1
-      SWITCH($phoban)
-         CASE(1)
-            $max_runs = 4
-         CASE(2)
-            $max_runs = 4
-         CASE(3)
-            $max_runs = 4
-         CASE(4)
-            $max_runs = 4
-         CASE(5)
-            $max_runs = 4
-         CASE(6)
-            $max_runs = 4
-         CASE(7)
-            $max_runs = 4
-         CASE(8)
-            $max_runs = 4
-         CASE(9)
-            $max_runs = 4
-         CASE(10)
-            $max_runs = 4
-         CASE(11)
-            $max_runs = 4
-         CASE(12)
-            $max_runs = 4
-
-      END_SWITCH
-      
       TFWRITE($file_progress, $phoban, 1)
       TFWRITE($file_progress, $count, 2)
       
    END_CYC
 end_if
-
 
 logwrite("Hoàn thành nv ngày & veDHT.")
 halt
