@@ -1,0 +1,9 @@
+﻿#name("Team1")
+#autorun
+$tk = TFREAD("TaiKhoan\\taikhoan.txt",2)
+$wnd1 = wndfind($tk)
+waitms(500)
+wndSize($wnd1,1016,639)
+wndPos($wnd1,0,600)
+hset($wnd1,1)
+halt(1)

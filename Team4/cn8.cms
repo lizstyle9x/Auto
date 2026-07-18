@@ -1,0 +1,25 @@
+﻿#autorun
+$tk = TFREAD("taikhoan\\taikhoan.txt",1)     //tài khoan
+$hwnd = wndfind($tk)
+$x= 1600
+$y= 0
+$d=300
+$r=200
+WNDSETINFO($hwnd,$x,$y,$d,$r)
+hsetText($hwnd,$tk)
+
+//lockwin
+$hwnd = wndfind($tk)
+hset($hwnd,1)
+LCLICK(1,1)
+
+//--------------------------
+
+Getscreen
+if_pixel_in(146,75,146,75,11528191)
+      #includer("ht\\buff.txt")
+      keydown(68)
+      waitms(2000)
+      keyup(68)
+      waitms(100)
+   end_if

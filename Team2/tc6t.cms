@@ -1,0 +1,71 @@
+﻿#autorun
+#name("DB6")
+#includer("sub.xml")
+team(1,1,2)
+taophong(0)
+getscreen
+dsl()
+//--------------- Chon Pb -----------------
+if(pxl(62,33) = 1191759)
+   if(pxl(63,34) = 141636)
+      chonpb(2,6,0)
+      moiban()
+   end_if
+end_if  
+batdau()
+//--------------- DAME -----------------
+Getscreen
+if_pixel_in(144,76,144,76,6405864)
+   if(pxl(283,152) = 1981681)
+      LCLICK(275,120)
+   end_if
+   mkn()
+   //      quettd(10,50,291,185)
+   inmau(176,35)
+   
+   if(pxl(176,35) = 12355664)
+      $toc = 3
+      goto(b3)
+   end_if
+   if($toc = 0)
+      keyDown(75)
+   end_if
+   getscreen
+   if(pxl(11,127) = 6303744,7945472)
+      $toc = 1
+      keyUp(75)
+      if($bow = 0)
+         keypress(39)
+         $bow = 2
+      end_if
+      $toc = 2
+   end_if
+   
+   if($toc = 2)
+      for($goc, $goc < 66)
+         keypress(38)
+      end_cyc
+      inc($turn)
+      print("turn = ", $turn)
+      keypress(#e)
+      keypress(#t)
+      keypress(#b)
+      keypress(#2)
+      keypress(#4)
+      dame(70,0)
+   end_if
+   
+   if($toc = 3)
+      b3:
+      for($ow, $ow < 46)
+         keypress(40)
+      end_cyc
+      inc($turn)
+      print("turn = ", $turn)
+      #includer("ht\\buff.txt")
+      dame(53,0)
+      wait(4)
+   end_if
+end_if
+//--------------MuaTina------------------
+latthe(1,15)

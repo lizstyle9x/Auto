@@ -1,0 +1,50 @@
+﻿#autorun
+#name("smm")
+#includer("sub.xml")
+team(1,1,2)
+getscreen
+//inmau(140,144)
+//inmau(143,149)
+
+
+//---------------------------lien tuc.
+if(pxl(107,117) = 3609139)
+   LCLICK(97,87)  // tich.
+   $dem = 0
+   waitms(1200)
+end_if
+//---------------------------bat dau.
+if(pxl(85,99) = 14203379)
+   LCLICK(87,73)  // bat dau.
+   $dem = 0
+   waitms(1200)
+end_if
+
+//---------------------------quay tiep neu pause.
+if(pxl(94,98) = 9933346)
+   $dem = $dem + 1
+   print("$dem : ", $dem)
+else
+   $dem = 0
+   print("<--------------sang------------->")
+end_if
+
+if(($dem > 65) & ($dem < 90))
+   LCLICK(87,73)  // bat dau.
+   waitms(1200)
+end_if
+
+//---------------------------quay tiep neu pause.
+if($dem > 90)
+   PostMessage($wnd1, 0x0010, 0, 0)
+   $dem = 0
+   $vb = 1
+   print("mat ket noi roi!")
+end_if
+//---------------------------tat bang kq.
+if(pxl(140,144) = 7713490)
+   if(pxl(143,149) = 3729151)
+      LCLICK(141,119)  // dong y.
+      waitms(1000)
+   end_if
+end_if

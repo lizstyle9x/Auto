@@ -1,0 +1,200 @@
+﻿#autorun
+#name("DTDS")
+#includer("sub.xml")
+team(1,1,2)
+taophong(0)
+getscreen
+dsl()
+moiban()
+//--------------- Chon Pb -----------------
+if(pxl(62,33) = 1191759)
+   if(pxl(63,34) = 141636)
+      chonpb(4,1,0)
+      rsb()
+   end_if
+end_if
+getscreen
+mangbau()
+batdau()
+
+//-------------------------------- dame
+
+Getscreen
+if_pixel_in(146,75,146,75,11528191)
+   LCLICK(275,120)
+   //-------------------boss vàng------------------
+   
+   if_pixel_in(177,38,177,38,256487)
+      if_pixel_in(176,162,176,162,1269628)        // goc  1
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 0)
+            keypress(39)
+            keypress(#z)
+            keypress(#x)
+            waitms(500)
+            keypress(#b)
+            $bow = 2
+         end_if
+         for ($goc, $goc<18-$vk)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(3100)
+         keyup(68)
+         waitms(100)
+      end_if
+      
+      if_pixel_in(176,162,176,162,1335430)    //goc15
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 0)
+            keypress(39)
+            keypress(#z)
+            keypress(#x)
+            waitms(500)
+            keypress(#b)
+            $bow = 2
+         end_if
+         for ($goc, $goc<18-$vk)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(2500)
+         keyup(68)
+         waitms(100)
+      end_if
+      
+      if_pixel_in(176,162,176,162,1203833)         // goc 14
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 0)
+            keypress(39)
+            keypress(#z)
+            keypress(#x)
+            waitms(500)
+            keypress(#b)
+            $bow = 2
+         end_if
+         for ($goc, $goc<18-$vk)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(2500)
+         keyup(68)
+         waitms(100)
+      end_if
+      
+      if_pixel_in(176,162,176,162,1273724)      // goc 18
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 0)
+            keypress(39)
+            keypress(#z)
+            keypress(#x)
+            waitms(500)
+            keypress(#b)
+            $bow = 2
+         end_if
+         for ($goc, $goc<18-$vk)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(2500)
+         keyup(68)
+         waitms(100)
+      end_if
+   end_if
+   //-------------------Boss Den----------------
+   if_pixel_in(177,38,177,38,14013909)
+      if_pixel_in(176,162,176,162,1269628)
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 2)
+            keypress(37)
+            keypress(#c)
+            waitms(500)
+            keypress(#b)
+            $bow = 0
+         end_if
+         for ($goc, $goc<29)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(1400)
+         keyup(68)
+         waitms(100)
+      end_if
+      
+      if_pixel_in(176,162,176,162,1335430,1271688)
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 2)
+            keypress(37)
+            keypress(#c)
+            waitms(500)
+            keypress(#b)
+            $bow = 0
+         end_if
+         for ($goc, $goc<32)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(1800)
+         keyup(68)
+         waitms(100)
+      end_if
+      
+      if_pixel_in(176,162,176,162,1203833)      // goc 14
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 2)
+            keypress(37)
+            keypress(#c)
+            waitms(500)
+            keypress(#b)
+            $bow = 0
+         end_if
+         for ($goc, $goc<33)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(2100)
+         keyup(68)
+         waitms(100)
+      end_if
+      
+      if_pixel_in(176,162,176,162,1273724)     // goc 18
+         inc($turn)
+         print("turn = ", $turn)
+         if($bow = 2)
+            keypress(37)
+            keypress(#c)
+            waitms(500)
+            keypress(#b)
+            $bow = 0
+         end_if
+         for ($goc, $goc<33)
+            keypress(38)
+         end_cyc
+         #includer("ht\\buff.txt")
+         keydown(68)
+         waitms(2100)
+         keyup(68)
+         waitms(100)
+      end_if
+   end_if
+end_if
+//-----------------------------
+latthe(1,15)
+//-----------------------------
+
+//$clr = PXL(176,162)
+//print($clr)

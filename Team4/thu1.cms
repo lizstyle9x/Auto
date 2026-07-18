@@ -1,0 +1,167 @@
+#name("Clone 1 Team 1")
+#autorun
+#includer("sub.xml")
+team(2,3,4)
+GetScreen
+//-------------------------------------- NHẬN THƯ ($thu = 1)
+if($thu = 1)
+   getscreen
+   //mo hom thu
+   if_pixel_in(43,134,43,134,8642283,1386808,2778246)
+      print("Mo thu")
+      keypress(#r)
+      waitms(1000)
+   end_if
+   if(pxl(157,143) = 8487297)
+      LCLICK(42,135)  // 121169781
+      waitms(300)
+      LCLICK(79,133)  // 8829132
+      waitms(500)
+      LCLICK(56,134)  // 2180703
+      waitms(700)
+   end_if
+
+//-------------------------------------- GỬI THƯ ($thu = 0)
+else
+   //----- mo hom thu
+   if_pixel_in(207,177,207,177,14086399,7269119)
+      LCLICK(197,150)
+   end_if
+   
+   //----- viet thu
+   if(pxl(39,47) = 401476)
+      if(pxl(40,47) = 10538208)
+         LCLICK(46,145)
+      end_if
+   end_if
+   
+   //-------------------- trang bi
+   if_pixel_in(264,82,264,82,11588574,11654367)
+      print("Đang send thư Trang bị")
+      for($b = 34, $b < 130)
+         for($a = 153, $a < 240)
+            getscreen
+            if_pixel_in($a+8,$b+31,$a+8,$b+31,13426919)
+               if_pixel_in($a+8,$b+34,$a+8,$b+34,13426919)
+                  print("stop in: Trang bị \ x=",$a+8,", y=",$b+31)
+                  wait(0.2)
+                  inc($yt)
+               end_if
+            end_if
+            if($yt => 3)
+               halt
+            end_if
+            LCLICK($a,$b)//click item
+            waitms(500)
+            LCLICK(28,126)  // add
+            waitms(500)
+            keypress(#enter)
+            waitms(500)
+            DBLCLICK(49,28)  // nguoi nhan
+            waitms(500)
+            keystring($ingame)
+            waitms(500)
+            LCLICK(37,144)  // gui
+            waitms(500)
+            $a = $a + 13
+         end_cyc
+         waitms(300)
+         $b = $b + 13
+      end_cyc
+   end_if
+   
+   //-------------------- dao cu
+   if_pixel_in(264,111,264,111,11259613,11194077, 11259357)
+      print("Đang send thư Đạo cụ")
+      for($b = 34, $b < 130)
+         for($a = 153, $a < 240)
+            getscreen
+            if_pixel_in($a+8,$b+31,$a+8,$b+31,13426919)
+               print("stop in: Trang bị \ x=",$a+8,", y=",$b+31)
+               waitms(200)
+               inc($yt)
+            end_if
+            if($yt => 3)
+               halt
+            end_if
+            LCLICK($a,$b)//click item
+            waitms(500)
+            LCLICK(28,126)  // add
+            waitms(500)
+            keypress(#enter)
+            waitms(500)
+            DBLCLICK(49,28)  // nguoi nhan
+            waitms(500)
+            keystring($ingame)
+            waitms(500)
+            LCLICK(37,144)  // gui
+            waitms(500)
+            $a = $a + 13
+         end_cyc
+         waitms(300)
+         $b = $b + 13
+      end_cyc
+   end_if
+   
+   //-------------------- chau bau
+   if_pixel_in(264,140,264,140,11457249,11456993)
+      print("Đang send thư Châu báu")
+      for($b = 34, $b < 130)
+         for($a = 153, $a < 240)
+            getscreen
+            if_pixel_in($a+8,$b+31,$a+8,$b+31,13426919)
+               if_pixel_in($a+8,$b+34,$a+8,$b+34,13426919)
+                  print("stop in: Trang bị \ x=",$a+8,", y=",$b+31)
+                  wait(0.2)
+                  inc($yt)
+               end_if
+            end_if
+            if($yt => 3)
+               halt
+            end_if
+            LCLICK($a,$b)//click item
+            waitms(500)
+            LCLICK(28,126)  // add
+            waitms(500)
+            keypress(#enter)
+            waitms(500)
+            DBLCLICK(49,28)  // nguoi nhan
+            waitms(300)
+            keystring($ingame)
+            waitms(200)
+            LCLICK(37,144)  // gui
+            waitms(300)
+            $a = $a + 13
+         end_cyc
+         waitms(300)
+         $b = $b + 13
+      end_cyc
+   end_if
+   
+   //-------------------- trang phuc
+   if_pixel_in(265,150,265,150,11852249,11720665)
+      print("Đang send thư Trang phục")
+      getscreen
+      LCLICK(157,47)  // click item
+      waitms(500)
+      LCLICK(28,126)  // add
+      waitms(500)
+      keypress(#enter)
+      waitms(300)
+      DBLCLICK(49,28)  // nguoi nhan
+      waitms(300)
+      keystring($ingame)
+      waitms(200)
+      LCLICK(37,144)  // gui
+      waitms(500)
+   end_if
+
+   getscreen
+   if_pixel_in(265,150,265,150,13426919)
+      wait(0.2)
+      inc($yt)
+   end_if
+   if($yt => 3)
+      halt
+   end_if
+end_if
