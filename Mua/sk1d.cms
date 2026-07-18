@@ -39,5 +39,6 @@ if_pixel_in(144,76,144,76,6405864)
          dame(65,7)
       wait(4)
 end_if
+end_if
 //--------------MuaTina------------------
 latthe(1,15)
