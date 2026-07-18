@@ -1,18 +1,7 @@
 ﻿#name("thuCL2")
-#autorun
-$tk = TFREAD("taikhoan\\taikhoan.txt",3)
-$x = TFREAD("taikhoan\\toado.txt",5)
-$y = TFREAD("taikhoan\\toado.txt",6)
-$ten = TFREAD("taikhoan\\TenThu.txt",1)
-$ingame = $ten
-$thu = TFREAD("ht\\thu.txt",1)
-$wnd1 = wndfind($tk)
-waitms(500)
-wndSize($wnd1,300,200)
-wndPos($wnd1,$x,$y)
-hsettext($wnd1,$tk)
-hset($wnd1,1)
-LCLICK(-1,-1)
+﻿#autorun)
+#includer("sub.xml")
+team(3,5,6)
 GetScreen
 //-------------------------------------- NHẬN THƯ ($thu = 1)
 if($thu = 1)
