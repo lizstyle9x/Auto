@@ -7,17 +7,17 @@ GetScreen
 if($thu = 1)
    getscreen
    //mo hom thu
-   if_pixel_in(264,328,264,328,10220286)
+   if_pixel_in(43,134,43,134,8642283,1386808,2778246)
       print("Mo thu")
-      LCLICK(340,288)  // 265496
+      keypress(#r)
       waitms(1000)
    end_if
-   if(pxl(400,118) = 11721706)
-      LCLICK(67,258)  // 12182771
+   if(pxl(157,143) = 8487297)
+      LCLICK(42,135)  // 121169781
       waitms(300)
-      LCLICK(126,259)  // 1655904
+      LCLICK(79,133)  // 8829132
       waitms(500)
-      LCLICK(96,259)  // 6788773
+      LCLICK(56,134)  // 2180703
       waitms(700)
    end_if
 
