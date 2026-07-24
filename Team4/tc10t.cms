@@ -22,7 +22,21 @@ if_pixel_in(144,76,144,76,6405864)
    mkn()
    //   quettd(10,50,291,185)
    //   inmau(148,180)
-   
+   if(pxl(122,130) = 6303744,7945472)//1.
+      inc($turn)
+      print("turn = ", $turn)
+      if($bow = 0)
+         keypress(39)
+         $bow = 1
+      end_if
+      waitms(300)
+      for($goc, $goc < 44 - $vk)//2.
+         keypress(38)
+      end_cyc
+      #include "ht\\buff.txt"
+      keoluc(40)
+      wait(3)
+   end_if
    if(pxl(51,130) = 6303744,7945472)//1.
       inc($turn)
       print("turn = ", $turn)
@@ -73,3 +87,4 @@ if_pixel_in(144,76,144,76,6405864)
 end_if
 //--------------MuaTina------------------
 latthe(1,15)
+//--------------MuaTina------------------
