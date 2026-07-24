@@ -34,7 +34,7 @@ if_pixel_in(144,76,144,76,6405864)
          keypress(38)
       end_cyc
       #include "ht\\buff.txt"
-      keoluc(40)
+      dame(40,0)
       wait(3)
    end_if
    if(pxl(51,130) = 6303744,7945472)//1.
@@ -49,7 +49,7 @@ if_pixel_in(144,76,144,76,6405864)
          keypress(38)
       end_cyc
       #include "ht\\buff.txt"
-      keoluc(45)
+      dame(45,0)
       wait(3)
    end_if
    
@@ -65,7 +65,7 @@ if_pixel_in(144,76,144,76,6405864)
          keypress(38)
       end_cyc
       #include "ht\\buff.txt"
-      keoluc(50)
+      dame(50,0)
       wait(3)
    end_if
    
@@ -81,7 +81,7 @@ if_pixel_in(144,76,144,76,6405864)
          keypress(38)
       end_cyc
       #include "ht\\buff.txt"
-      keoluc(50)
+      dame(50,0)
       wait(3)
    end_if
 end_if
