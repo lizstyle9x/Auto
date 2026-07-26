@@ -12,6 +12,7 @@ if(pxl(62,33) = 1191759)
    end_if
 end_if
 moiban()
+mangbau()
 batdau()
 //--------------- DAME -----------------
 Getscreen
