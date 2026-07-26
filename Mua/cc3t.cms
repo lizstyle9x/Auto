@@ -39,7 +39,9 @@ if_pixel_in(144,76,144,76,6405864)
       end_if
       waitms(600)
       #include ("ht\\buff.txt")
-      dame(80,0)
+      keydown(68)
+      waitms(3200)
+      keyup(68))
       wait(4)
    end_if
    //
@@ -56,7 +58,9 @@ if_pixel_in(144,76,144,76,6405864)
       end_if
       waitms(600)
       #include ("ht\\buff.txt")
-      dame(80,0)
+      keydown(68)
+      waitms(3200)
+      keyup(68)
       wait(4)
    end_if
    //
@@ -74,7 +78,9 @@ if_pixel_in(144,76,144,76,6405864)
       end_if
       waitms(600)
       #include ("ht\\buff.txt")
-     dame(80,0)
+     keydown(68)
+      waitms(3200)
+      keyup(68)
       wait(4)
    end_if
    
@@ -91,7 +97,9 @@ if_pixel_in(144,76,144,76,6405864)
       end_if
       waitms(600)
       #include ("ht\\buff.txt")
-      dame(80,0)
+      keydown(68)
+      waitms(3200)
+      keyup(68)
       wait(4)
    end_if
    
