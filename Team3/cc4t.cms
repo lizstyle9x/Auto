@@ -1,0 +1,114 @@
+﻿#autorun
+#name("cc4")
+#includer("sub.xml")
+$tk = TFREAD("taikhoan\\taikhoan.txt",1)
+$x = TFREAD("taikhoan\\toado.txt",1)
+$y = TFREAD("taikhoan\\toado.txt",2)
+$reg = TFREAD("ht\\checkrg.txt",1)
+$btn = TFREAD("ht\\btn.txt",1)
+$Guild = TFREAD("ht\\Guild.txt",1)
+$SoluongClone = TFREAD("ht\\SoluongClone.txt", 1)
+$wnd1 = wndfind($tk)
+$vk = TFREAD("ht\\gocvk.txt",1)
+$time = TFREAD("ht\\time.txt",1)
+$time = $time*120*1.7
+waitms(50)
+wndSize($wnd1,300,200)
+wndPos($wnd1,$x,$y)
+$nhatky = STRCONCAT($tk," Win:  ", $Win , " lose:  ", $lose, "   Relog:  ",$re)
+hsettext($wnd1,$nhatky)
+hset($wnd1,1)
+LCLICK(-1,-1)
+getscreen
+taophong(0)
+getscreen
+dsl()
+if(pxl(62,33) = 1191759)
+   if(pxl(63,34) = 141636)
+      LCLICK(160,50)
+      waitms(300)
+      for($c = 0, $c < 0)
+         LCLICK(220,83)
+      end_cyc
+      waitms(300)
+      LCLICK(193,64)
+      waitms(300)
+      LCLICK(142,151)
+      wait(1)
+      getscreen
+      if(pxl(97,103) = 7778774)
+         if(pxl(98,103) = 12113899)
+            LCLICK(142,97)
+         end_if
+      end_if
+      rsb()
+      moiban()
+   end_if
+end_if
+getscreen
+batdau()
+//--------------- DAME -----------------
+Getscreen
+if_pixel_in(144,76,144,76,6405864)
+   if(pxl(283,152) = 1981681)
+      LCLICK(275,120)
+   end_if
+   //   mkn()
+   //   quettd(10,50,291,185)
+   //   inmau(81,178)
+   //   inmau(201,177)
+   //   inmau(143,62)//6.
+   //   inmau(143,53)
+   
+   if(pxl(71,127) = 6303744,7945472)    //1.
+      inc($turn)
+      print("chun41 = ", $turn)
+      for ($goc, $goc < 21 -$vk)
+         keypress(38)
+      end_cyc
+      waitms(600)
+      #include ("ht\\buff.txt")
+      keoluc(60)
+      wait(4)
+   end_if
+   
+   if(pxl(95,127) = 6303744,7945472)     //2.
+      inc($turn)
+      print("chun26 = ", $turn)
+      for ($goc, $goc < 31 -$vk)
+         keypress(38)
+      end_cyc
+      waitms(600)
+      #include ("ht\\buff.txt")
+      keoluc(55)
+      wait(4)
+   end_if
+   
+   if(pxl(117,127) = 6303744,7945472)  //3.
+      inc($turn)
+      print("chun12 = ", $turn)
+      for ($goc, $goc < 14 -$vk)
+         keypress(38)
+      end_cyc
+      waitms(600)
+      #include ("ht\\buff.txt")
+      keoluc(55)
+      wait(4)
+   end_if
+   
+   if(pxl(147,127) = 6303744,7945472)    //4.
+      inc($turn)
+      print("chun54 = ", $turn)
+      for ($goc, $goc < 1 -$vk)
+         keypress(38)
+      end_cyc
+      waitms(600)
+      #include ("ht\\buff.txt")
+      keoluc(50)
+      wait(4)
+   end_if
+   
+end_if
+//--------------MuaTina------------------
+latthe(1,20)
+//--------------MuaTina------------------
