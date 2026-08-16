@@ -1,7 +1,7 @@
 ﻿#autorun
 #name("war1L")
 #includer("sub.xml")
-team(1,1,2)
+team(2,3,4)
 taophong(1)
 $SoluongClone = 0
 getscreen
