@@ -22,17 +22,17 @@ if_pixel_in(144,76,144,76,6405864)
    //   quettd(10,50,291,185)
    //   inmau(148,180)
    
-   if(pxl(37,128) = 6303744,7945472)
+  if(pxl(37,128) = 6303744,7945472)
       inc($turn)
       print("chun4 = ", $turn)
-      dame(50,32)
+      dame(50,52)
       wait(4)
    end_if
    
    if(pxl(21,128) = 6303744,7945472)
       inc($turn)
       print("chun2 = ", $turn)
-      dame(40,30)
+      dame(45,45)
       wait(4)
    end_if
    
@@ -46,7 +46,7 @@ if_pixel_in(144,76,144,76,6405864)
    if(pxl(45,128) = 6303744,7945472)
       inc($turn)
       print("chun1 = ", $turn)
-      dame(45,30)
+      dame(40,45)
       wait(4)
    end_if
 end_if
