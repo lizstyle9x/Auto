@@ -28,7 +28,14 @@ if_pixel_in(144,76,144,76,6405864)
       dame(50,20)
       wait(4)
    end_if
-   
+
+if(pxl(68,128) = 6303744,7945472)
+      inc($turn)
+      print("chun5 = ", $turn)
+      dame(40,5)
+      wait(4)
+   end_if
+
    if(pxl(41,128) = 6303744,7945472)
       inc($turn)
       print("chun2 = ", $turn)
