@@ -29,6 +29,13 @@ if_pixel_in(144,76,144,76,6405864)
       wait(4)
    end_if
    
+   if(pxl(68,128) = 6303744,7945472)
+      inc($turn)
+      print("chun5 = ", $turn)
+      dame(40,5)
+      wait(4)
+   end_if
+   
    if(pxl(41,128) = 6303744,7945472)
       inc($turn)
       print("chun2 = ", $turn)
@@ -39,7 +46,7 @@ if_pixel_in(144,76,144,76,6405864)
    if(pxl(56,128) = 6303744,7945472)
       inc($turn)
       print("chun3 = ", $turn)
-      dame(40,30)
+      dame(30,0)
       wait(4)
    end_if
    
@@ -51,4 +58,4 @@ if_pixel_in(144,76,144,76,6405864)
    end_if
 end_if
 //--------------MuaTina------------------
-latthe(1,20)
+#includer("ht\\latthe.txt")
