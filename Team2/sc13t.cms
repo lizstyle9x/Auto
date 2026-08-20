@@ -20,7 +20,10 @@ if_pixel_in(144,76,144,76,6405864)
       LCLICK(275,120)
    end_if
    
-   if(pxl(170,130) = 1392485)
+//   $m = pxl(180,100)
+//   print($m)
+   
+   if(pxl(180,100) = 6390688)
       inc($turn)
       keypress(#right)
       print("chun4 = ", $turn)
@@ -28,15 +31,15 @@ if_pixel_in(144,76,144,76,6405864)
       wait(4)
    end_if
    
-   if(pxl(170,130) = 797775)     
+   if(pxl(180,100) = 2772864)
       inc($turn)
       keypress(#right)
       print("chun2 = ", $turn)
-      dame(45,40)
+      dame(50,40)
       wait(4)
    end_if
    
-   if(pxl(170,130) = 928844)
+   if(pxl(180,100) = 9288440)
       inc($turn)
       keypress(#right)
       print("chun3 = ", $turn)
@@ -44,11 +47,11 @@ if_pixel_in(144,76,144,76,6405864)
       wait(4)
    end_if
    
-   if(pxl(170,130) = 1782104)
+   if(pxl(180,100) = 5993888, 6321041)
       inc($turn)
-      keypress(#right)
+      // keypress(#right)
       print("chun1 = ", $turn)
-      dame(45,30)
+      dame(50,30)
       wait(4)
    end_if
 end_if

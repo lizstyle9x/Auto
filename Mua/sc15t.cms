@@ -1,6 +1,6 @@
 ﻿#autorun
 #name("sc15")
-#includer("sub.xml")
+#includer("sup.xml")
 team(1,1,2)
 taophong(0)
 getscreen
@@ -16,9 +16,7 @@ batdau()
 //--------------- DAME -----------------
 Getscreen
 if_pixel_in(144,76,144,76,6405864)
-   if(pxl(283,152) = 1981681)
       LCLICK(275,120)
-   end_if
    //   quettd(10,50,291,185)
    //   inmau(148,180)
    
@@ -26,6 +24,21 @@ if_pixel_in(144,76,144,76,6405864)
       inc($turn)
       print("chun4 = ", $turn)
       dame(50,20)
+      wait(4)
+   end_if
+   
+   
+   if(pxl(40,128) = 6303744,7945472)
+      inc($turn)
+      print("chun4 = ", $turn)
+      dame(50,20)
+      wait(4)
+   end_if
+   
+   if(pxl(33,128) = 6303744,7945472)
+      inc($turn)
+      print("chun5 = ", $turn)
+      dame(45,27)
       wait(4)
    end_if
    
@@ -51,4 +64,4 @@ if_pixel_in(144,76,144,76,6405864)
    end_if
 end_if
 //--------------MuaTina------------------
-latthe(1,20)
+#includer("ht\\latthe.txt")
